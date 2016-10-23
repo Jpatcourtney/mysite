@@ -17,9 +17,9 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from jpatco import views as jpatco_views
 
-
 urlpatterns = [
     url(r'^$', jpatco_views.redirecthome),
     url(r'^urtney/', include('jpatco.urls')),
+    url(r'^blog/', include('blog.urls')),
     url(r'^admin/', admin.site.urls),
 ]
